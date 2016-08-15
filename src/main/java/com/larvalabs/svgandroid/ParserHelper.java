@@ -24,12 +24,7 @@ public class ParserHelper {
 			STRING_CHARS = String.class.getDeclaredField("value");
 			STRING_CHARS.setAccessible(true);
 		} catch (Exception e) {
-			try{
-				STRING_CHARS = String.class.getDeclaredField("ASCII");
-				STRING_CHARS.setAccessible(true);
-			}catch (Exception e) {
-				throw new RuntimeException(e);
-			}
+			throw new RuntimeException(e);
 		}
 	}
 
